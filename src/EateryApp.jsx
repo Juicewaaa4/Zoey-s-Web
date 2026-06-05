@@ -26,9 +26,9 @@ const BRANDS = [
 ]
 
 const STATS = [
-  { value: '10+', label: 'Tables' },
-  { value: '500+', label: 'Happy Customers' },
-  { value: '2024', label: 'Established' },
+  { value: '🍽️', label: 'Budget-Friendly Meals' },
+  { value: '🍻', label: 'Ice Cold Beverages' },
+  { value: '✨', label: 'Clean & Safe Dining' },
   { value: '7', label: 'Days Open' },
 ]
 
@@ -71,10 +71,10 @@ const GALLERY_ITEMS = [
 ]
 
 const ABOUT_VALUES = [
-  'Clean Facilities',
-  'Friendly Staff',
-  'Affordable Rates',
-  'Open to All Ages',
+  'Budget-Friendly Meals',
+  'Ice Cold Beverages',
+  'Clean & Safe Dining',
+  'Local Favorites',
 ]
 
 // ─── Color tokens — Light Pink Theme ────────────────────────────────────────

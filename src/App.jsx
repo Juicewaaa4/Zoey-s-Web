@@ -26,7 +26,7 @@ const BRANDS = [
 ]
 
 const STATS = [
-  { value: '10+', label: 'Tables' },
+  { value: '100%', label: 'Well-Maintained' },
   { value: '500+', label: 'Happy Customers' },
   { value: '2024', label: 'Established' },
   { value: '7', label: 'Days Open' },
