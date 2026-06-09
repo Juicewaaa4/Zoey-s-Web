@@ -628,9 +628,7 @@ export default function EateryApp({ onSwitchBrand }) {
               {/* Google Maps Embed - using Zoey's Pisonet & Billiard House */}
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3856.88390757262!2d120.85135147493264!3d14.901286285623032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396550019897dc9%3A0x9c9bf3e9b820d5b8!2sZoey&#39;s%20Pisonet%20%26%20Billiard%20House!5e0!3m2!1sen!2sph!4v1717912440000!5m2!1sen!2sph"
-                width="100%" 
-                height="280" 
-                style={{ border: 0, display: 'block' }} 
+                style={{ border: 0, display: 'block', width: '100%', height: 'clamp(250px, 35vw, 400px)' }} 
                 allowFullScreen="" 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade">
