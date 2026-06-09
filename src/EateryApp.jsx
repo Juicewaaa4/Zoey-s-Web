@@ -623,20 +623,91 @@ export default function EateryApp({ onSwitchBrand }) {
                 <span aria-hidden="true">🕐</span>
                 <span>Open Daily: 8:00 AM – 2:00 AM</span>
               </div>
+            <div className="reveal reveal-delay-4" style={{ marginTop: 60, borderRadius: 20, overflow: 'hidden', boxShadow: '0 12px 32px rgba(5,150,105,0.1)' }}>
+              {/* Google Maps Embed - using Paltao, Pulilan, Bulacan */}
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15421.847525424564!2d120.8407421!3d14.9080275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396556cf9e1d88b%3A0xc07ce9b04f32630!2sPaltao%2C%20Pulilan%2C%20Bulacan!5e0!3m2!1sen!2sph!4v1717904000000!5m2!1sen!2sph" 
+                width="100%" 
+                height="350" 
+                style={{ border: 0, display: 'block' }} 
+                allowFullScreen="" 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade">
+              </iframe>
+              <div style={{ padding: '20px 24px', backgroundColor: '#FFFFFF', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 32 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 15, color: C.body, fontWeight: 500 }}>
+                  <span aria-hidden="true" style={{ fontSize: 18 }}>📍</span>
+                  <span>Paltao, Pulilan, Bulacan</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 15, color: C.body, fontWeight: 500 }}>
+                  <span aria-hidden="true" style={{ fontSize: 18 }}>🕐</span>
+                  <span>Open Daily: 8:00 AM – 2:00 AM</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </main>
 
-      {/* ── Footer ── */}
-      <footer style={{ background: `linear-gradient(135deg, #FFF0F6 0%, #FCE7F3 100%)`, borderTop: `1px solid ${C.primaryPale}`, padding: '32px 0' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <EateryLogoImage size={44} border={2} />
-            <span style={{ fontSize: 16, fontWeight: 700, color: C.primary }}>Zoey&apos;s Eatery & Street Foods</span>
+      {/* ── Rich Footer ── */}
+      <footer style={{ background: '#064E3B', color: '#ECFDF5', padding: '64px 0 24px' }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 48, marginBottom: 48 }}>
+          
+          {/* Brand Info */}
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
+              <EateryLogoImage size={48} border={0} />
+              <span style={{ fontSize: 18, fontWeight: 700, color: '#34D399', letterSpacing: '-0.01em' }}>Zoey&apos;s Eatery</span>
+            </div>
+            <p style={{ fontSize: 14, color: '#A7F3D0', lineHeight: 1.7, marginBottom: 24, maxWidth: 300 }}>
+              Paltao&apos;s premier destination for billiards, relaxation, and great comfort food. We provide top-notch tables and freshly cooked meals.
+            </p>
+            {/* Social Icons */}
+            <div style={{ display: 'flex', gap: 16 }}>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={{ width: 40, height: 40, borderRadius: '50%', backgroundColor: 'rgba(52, 211, 153, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#34D399', transition: 'all 0.2s', border: '1px solid rgba(52,211,153,0.2)' }} onMouseEnter={e => {e.currentTarget.style.backgroundColor = '#34D399'; e.currentTarget.style.color = '#064E3B'}} onMouseLeave={e => {e.currentTarget.style.backgroundColor = 'rgba(52, 211, 153, 0.1)'; e.currentTarget.style.color = '#34D399'}}>
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ width: 40, height: 40, borderRadius: '50%', backgroundColor: 'rgba(52, 211, 153, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#34D399', transition: 'all 0.2s', border: '1px solid rgba(52,211,153,0.2)' }} onMouseEnter={e => {e.currentTarget.style.backgroundColor = '#34D399'; e.currentTarget.style.color = '#064E3B'}} onMouseLeave={e => {e.currentTarget.style.backgroundColor = 'rgba(52, 211, 153, 0.1)'; e.currentTarget.style.color = '#34D399'}}>
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+            </div>
           </div>
-          <p style={{ margin: 0, fontSize: 13, color: C.muted, textAlign: 'center' }}>
-            © {new Date().getFullYear()} Zoey&apos;s Eatery & Street Foods · Paltao, Pulilan, Bulacan
+
+          {/* Quick Links */}
+          <div>
+            <h4 style={{ fontSize: 16, fontWeight: 600, color: '#FFFFFF', margin: '0 0 20px' }}>Quick Links</h4>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
+              {['Home', 'About', 'Services', 'Gallery'].map(link => (
+                <li key={link}>
+                  <a href={`#${link.toLowerCase()}`} style={{ color: '#A7F3D0', textDecoration: 'none', transition: 'color 0.2s' }} onMouseEnter={e => e.currentTarget.style.color = '#34D399'} onMouseLeave={e => e.currentTarget.style.color = '#A7F3D0'}>
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Hours */}
+          <div>
+            <h4 style={{ fontSize: 16, fontWeight: 600, color: '#FFFFFF', margin: '0 0 20px' }}>Operating Hours</h4>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
+              <li style={{ display: 'flex', justifyContent: 'space-between', color: '#A7F3D0' }}>
+                <span>Monday - Sunday</span>
+                <span style={{ fontWeight: 600, color: '#34D399' }}>8:00 AM - 2:00 AM</span>
+              </li>
+              <li style={{ display: 'flex', justifyContent: 'space-between', color: '#A7F3D0', marginTop: 8, paddingTop: 16, borderTop: '1px solid rgba(52,211,153,0.2)' }}>
+                <span>Walk-ins</span>
+                <span style={{ fontWeight: 600, color: '#FFFFFF' }}>Always Welcome</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* Bottom Bar */}
+        <div style={{ borderTop: '1px solid rgba(52,211,153,0.2)', paddingTop: 24, textAlign: 'center' }}>
+          <p style={{ margin: 0, fontSize: 13, color: 'rgba(167,243,208,0.7)' }}>
+            © {new Date().getFullYear()} Zoey&apos;s Billiard House & Eatery. All rights reserved.
           </p>
         </div>
       </footer>
