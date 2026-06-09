@@ -623,6 +623,7 @@ export default function EateryApp({ onSwitchBrand }) {
                 <span aria-hidden="true">🕐</span>
                 <span>Open Daily: 8:00 AM – 2:00 AM</span>
               </div>
+            </div>
             <div className="reveal reveal-delay-4" style={{ marginTop: 60, borderRadius: 20, overflow: 'hidden', boxShadow: '0 12px 32px rgba(5,150,105,0.1)' }}>
               {/* Google Maps Embed - using Paltao, Pulilan, Bulacan */}
               <iframe 
