@@ -376,9 +376,31 @@ export default function EateryApp({ onSwitchBrand }) {
               </div>
             </div>
 
-            {/* Hero Image */}
-            <div className="reveal reveal-delay-2 hero-ball-wrapper" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingRight: 24 }}>
-              <EateryLogoImage size={240} border={0} />
+            {/* Hero Images - Split Pill Design */}
+            <div className="reveal reveal-delay-2" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 16, height: 380, paddingRight: 24 }}>
+              
+              {/* Left Pill (Shifted Up) */}
+              <div style={{ marginTop: -40 }}>
+                <div className="float-1" style={{ width: 140, height: 280, borderRadius: 100, overflow: 'hidden', boxShadow: '0 16px 40px rgba(5, 150, 105, 0.25)', border: `4px solid ${C.bgWhite}`, position: 'relative' }}>
+                  <img 
+                    src="/carousel eatery & street foods/Ihaw-Ihaw.jpg" 
+                    alt="Ihaw-Ihaw" 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                  />
+                </div>
+              </div>
+
+              {/* Right Pill (Shifted Down) */}
+              <div style={{ marginTop: 60 }}>
+                <div className="float-2" style={{ width: 150, height: 320, borderRadius: 100, overflow: 'hidden', boxShadow: '0 16px 40px rgba(5, 150, 105, 0.25)', border: `4px solid ${C.bgWhite}`, position: 'relative' }}>
+                  <img 
+                    src="/carousel eatery & street foods/Lechon Kawali.jpg" 
+                    alt="Lechon Kawali" 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                  />
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
