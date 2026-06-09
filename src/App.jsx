@@ -480,8 +480,8 @@ export function BilliardApp({ onSwitchBrand }) {
             <h2 className="reveal" style={{ textAlign: 'center', fontSize: 'clamp(1.4rem, 3vw, 2rem)', fontWeight: 700, color: C.heading, margin: '0 0 48px' }}>Why Choose Us</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 32 }}>
               {STATS.map((stat, i) => (
-                <div key={stat.label} className={`reveal reveal-delay-${i + 1}`} style={{ textAlign: 'center' }}>
-                  <p style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: C.primary, margin: '0 0 8px' }}>{stat.value}</p>
+                <div key={stat.label} className={`reveal reveal-delay-${i + 1} stat-card`} style={{ textAlign: 'center' }}>
+                  <p className="stat-value" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 800, color: C.primary, margin: '0 0 8px' }}>{stat.value}</p>
                   <p style={{ fontSize: 15, color: C.body, margin: 0, fontWeight: 500 }}>{stat.label}</p>
                 </div>
               ))}
