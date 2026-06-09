@@ -298,9 +298,7 @@ export function BilliardApp({ onSwitchBrand }) {
           <ul style={{ display: 'flex', alignItems: 'center', gap: 28, listStyle: 'none', margin: 0, padding: 0 }} className="desktop-nav">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <a href={link.href} style={{ fontSize: 14, fontWeight: 500, color: C.body, textDecoration: 'none', transition: 'color 0.2s' }}
-                  onMouseEnter={e => e.target.style.color = C.primary}
-                  onMouseLeave={e => e.target.style.color = C.body}>
+                <a href={link.href} className="nav-link">
                   {link.label}
                 </a>
               </li>
@@ -447,11 +445,8 @@ export function BilliardApp({ onSwitchBrand }) {
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 32 }}>
               {BRANDS.map((brand, i) => (
-                <article key={brand.name} className={`reveal reveal-delay-${i + 1}`}
-                  style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: C.bgWhite, border: `1px solid ${C.cardBorder}`, borderRadius: 12, padding: 32, textAlign: 'center', boxShadow: '0 6px 18px rgba(142,47,95,0.1)', transition: 'transform 0.25s ease, box-shadow 0.25s ease', cursor: 'pointer' }}
-                  onClick={() => { if (brand.logoType === 'eatery') onSwitchBrand('eatery'); }}
-                  onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 12px 26px rgba(142,47,95,0.16)' }}
-                  onMouseLeave={e => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = '0 6px 18px rgba(142,47,95,0.1)' }}>
+                <article key={brand.name} className={`reveal reveal-delay-${i + 1} brand-card`}
+                  onClick={() => { if (brand.logoType === 'eatery') onSwitchBrand('eatery'); }}>
                   {brand.comingSoon && (
                     <span style={{ position: 'absolute', top: 12, right: 12, backgroundColor: C.forestDark, color: '#FFFFFF', fontSize: 11, fontWeight: 600, padding: '4px 10px', borderRadius: 20 }}>
                       Coming Soon
