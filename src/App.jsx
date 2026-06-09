@@ -16,7 +16,7 @@ const SERVICES = [
   { icon: '🎟️', title: 'Yearly Raffle', desc: 'Join our exciting yearly raffle draws with amazing prizes for our loyal customers.' },
   { icon: '🍴', title: 'Food & Drinks', desc: 'Snacks, meals, and refreshments from our sister brands while you play.' },
   { icon: '⭐', title: 'VIP Tables', desc: 'Premium reserved tables for a top-tier experience on special occasions.' },
-  { icon: '🎤', title: 'KTV Room', desc: 'Private KTV rooms for singing sessions with friends and family.' },
+  { icon: '🎤', title: 'KTV Room', desc: 'Private KTV room for singing sessions with friends and family.' },
   { icon: '🎶', title: 'Kubo Rentals with Karaoke', desc: 'Rent a cozy kubo with karaoke for your group hangout and bonding sessions.' },
 ]
 
@@ -44,7 +44,7 @@ const GALLERY_ITEMS = [
     image: '/carousel billiards/VIP.jpg'
   },
   {
-    name: 'KTV Rooms',
+    name: 'KTV Room',
     desc: 'Sing your heart out in our private, soundproof rooms.',
     image: '/carousel billiards/KTV.jpg'
   },
@@ -69,27 +69,27 @@ const ABOUT_VALUES = [
 
 // ─── Color tokens — Light Pink Theme ────────────────────────────────────────
 const C = {
-  primary:      '#059669',   // emerald green — headings, accents
+  primary: '#059669',   // emerald green — headings, accents
   primaryLight: '#34D399',   // lighter mint
-  primaryPale:  '#A7F3D0',   // very soft mint
-  forestDark:   '#065F46',   // dark forest green
+  primaryPale: '#A7F3D0',   // very soft mint
+  forestDark: '#065F46',   // dark forest green
   forestBorder: '#6EE7B7',
-  bgLight:      '#F0FDF4',
-  bgWhite:      '#FFFFFF',
-  cardBorder:   '#A7F3D0',
-  gold:         '#10B981',   // mint green buttons
-  goldHover:    '#059669',
-  heading:      '#064E3B',
-  body:         '#374151',
-  muted:        '#6B7280',
-  navText:      '#059669',
-  navBg:        'rgba(255,255,255,0.92)',
-  darkBody:     '#ECFDF5',
-  darkMuted:    '#6EE7B7',
-  placeholderBg:'#F0FDF4',
+  bgLight: '#F0FDF4',
+  bgWhite: '#FFFFFF',
+  cardBorder: '#A7F3D0',
+  gold: '#10B981',   // mint green buttons
+  goldHover: '#059669',
+  heading: '#064E3B',
+  body: '#374151',
+  muted: '#6B7280',
+  navText: '#059669',
+  navBg: 'rgba(255,255,255,0.92)',
+  darkBody: '#ECFDF5',
+  darkMuted: '#6EE7B7',
+  placeholderBg: '#F0FDF4',
   placeholderBorder: '#6EE7B7',
-  statsBg:      '#F0FDF4',
-  statsText:    '#059669',
+  statsBg: '#F0FDF4',
+  statsText: '#059669',
 }
 
 function LogoImage({ size = 48, border = 2 }) {
@@ -307,7 +307,7 @@ export function BilliardApp({ onSwitchBrand }) {
       {/* ── Navbar ── */}
       <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50, background: C.navBg, borderBottom: `1px solid ${C.primaryPale}`, boxShadow: '0 4px 24px rgba(214,51,132,0.10)', backdropFilter: 'blur(12px)' }}>
         <nav style={{ maxWidth: 1280, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 24px' }}>
-          <a href="#home" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); setMenuOpen(false); window.scrollTo({top: 0, behavior: 'smooth'}); }}>
+          <a href="#home" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none' }} onClick={(e) => { e.preventDefault(); setMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
             <LogoImage size={44} />
             <span style={{ fontSize: 15, fontWeight: 700, color: C.primary, letterSpacing: '-0.01em' }}>Zoey&apos;s Billiard House</span>
           </a>
@@ -547,11 +547,11 @@ export function BilliardApp({ onSwitchBrand }) {
               <div className="contact-card reveal reveal-delay-2" style={{ backgroundColor: C.bgWhite, border: `1px solid ${C.cardBorder}`, boxShadow: '0 6px 18px rgba(5,150,105,0.08)' }}>
                 <div className="contact-icon">
                   <svg width="52" height="52" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.5 5.1L1.5 18.9C1.5 20.1 2.5 21 3.75 21H7.5V11.25L1.5 6.75z" fill="#4285f4"/>
-                    <path d="M22.5 5.1L22.5 18.9C22.5 20.1 21.5 21 20.25 21H16.5V11.25L22.5 6.75z" fill="#34a853"/>
-                    <path d="M16.5 11.25V4.5L12 7.875L7.5 4.5V11.25L12 14.625z" fill="#ea4335"/>
-                    <path d="M22.5 6.75V5.1c0-.98-.82-1.78-1.8-1.78-.32 0-.64.08-.95.25L16.5 4.5v6.75z" fill="#fbbc04"/>
-                    <path d="M1.5 6.75V5.1c0-.98.82-1.78 1.8-1.78.32 0 .64.08.95.25L7.5 4.5v6.75z" fill="#c5221f"/>
+                    <path d="M1.5 5.1L1.5 18.9C1.5 20.1 2.5 21 3.75 21H7.5V11.25L1.5 6.75z" fill="#4285f4" />
+                    <path d="M22.5 5.1L22.5 18.9C22.5 20.1 21.5 21 20.25 21H16.5V11.25L22.5 6.75z" fill="#34a853" />
+                    <path d="M16.5 11.25V4.5L12 7.875L7.5 4.5V11.25L12 14.625z" fill="#ea4335" />
+                    <path d="M22.5 6.75V5.1c0-.98-.82-1.78-1.8-1.78-.32 0-.64.08-.95.25L16.5 4.5v6.75z" fill="#fbbc04" />
+                    <path d="M1.5 6.75V5.1c0-.98.82-1.78 1.8-1.78.32 0 .64.08.95.25L7.5 4.5v6.75z" fill="#c5221f" />
                   </svg>
                 </div>
                 <h3 style={{ marginTop: 16, fontSize: 17, fontWeight: 700, color: C.heading }}>Email Us</h3>
@@ -568,7 +568,7 @@ export function BilliardApp({ onSwitchBrand }) {
               <div className="contact-card reveal reveal-delay-3" style={{ backgroundColor: C.bgWhite, border: `1px solid ${C.cardBorder}`, boxShadow: '0 6px 18px rgba(5,150,105,0.08)' }}>
                 <div className="contact-icon" style={{ width: 52, height: 52, borderRadius: 12, backgroundColor: '#25D366', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="#FFFFFF"/>
+                    <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="#FFFFFF" />
                   </svg>
                 </div>
                 <h3 style={{ marginTop: 16, fontSize: 17, fontWeight: 700, color: C.heading }}>Call or Text Us</h3>
@@ -583,13 +583,13 @@ export function BilliardApp({ onSwitchBrand }) {
             </div>
             <div className="reveal reveal-delay-4" style={{ marginTop: 60, borderRadius: 20, overflow: 'hidden', boxShadow: '0 12px 32px rgba(5,150,105,0.1)' }}>
               {/* Google Maps Embed - using Zoey's Pisonet & Billiard House */}
-              <iframe 
+              <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3856.88390757262!2d120.85135147493264!3d14.901286285623032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396550019897dc9%3A0x9c9bf3e9b820d5b8!2sZoey&#39;s%20Pisonet%20%26%20Billiard%20House!5e0!3m2!1sen!2sph!4v1717912440000!5m2!1sen!2sph"
-                width="100%" 
-                height="280" 
-                style={{ border: 0, display: 'block' }} 
-                allowFullScreen="" 
-                loading="lazy" 
+                width="100%"
+                height="280"
+                style={{ border: 0, display: 'block' }}
+                allowFullScreen=""
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade">
               </iframe>
               <div style={{ padding: '20px 24px', backgroundColor: '#FFFFFF', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 32 }}>
@@ -608,22 +608,22 @@ export function BilliardApp({ onSwitchBrand }) {
       </main>
 
       {/* ── Rich Footer ── */}
-      <footer style={{ background: '#064E3B', color: '#ECFDF5', padding: '64px 0 24px' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: 48 }}>
-          
+      <footer style={{ background: '#064E3B', color: '#ECFDF5', padding: '32px 0 24px' }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: 24 }}>
+
           {/* Brand Info */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
-            <LogoImage size={48} border={0} />
-            <span style={{ fontSize: 20, fontWeight: 700, color: '#34D399', letterSpacing: '-0.01em' }}>Zoey&apos;s Billiard House</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
+            <LogoImage size={40} border={0} />
+            <span style={{ fontSize: 18, fontWeight: 700, color: '#34D399', letterSpacing: '-0.01em' }}>Zoey&apos;s Billiard House</span>
           </div>
-          <p style={{ fontSize: 15, color: '#A7F3D0', lineHeight: 1.7, maxWidth: 500 }}>
+          <p style={{ margin: 0, fontSize: 14, color: '#A7F3D0', lineHeight: 1.6, maxWidth: 450 }}>
             Paltao&apos;s premier destination for billiards, relaxation, and great comfort food. We provide top-notch tables and freshly cooked meals.
           </p>
 
         </div>
 
         {/* Bottom Bar */}
-        <div style={{ borderTop: '1px solid rgba(52,211,153,0.2)', paddingTop: 24, textAlign: 'center' }}>
+        <div style={{ borderTop: '1px solid rgba(52,211,153,0.2)', paddingTop: 16, textAlign: 'center' }}>
           <p style={{ margin: 0, fontSize: 13, color: 'rgba(167,243,208,0.7)' }}>
             © {new Date().getFullYear()} Zoey&apos;s Billiard House & Eatery. All rights reserved.
           </p>

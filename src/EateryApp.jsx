@@ -651,22 +651,22 @@ export default function EateryApp({ onSwitchBrand }) {
       </main>
 
       {/* ── Rich Footer ── */}
-      <footer style={{ background: '#064E3B', color: '#ECFDF5', padding: '64px 0 24px' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: 48 }}>
-          
+      <footer style={{ background: '#064E3B', color: '#ECFDF5', padding: '32px 0 24px' }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: 24 }}>
+
           {/* Brand Info */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
-            <EateryLogoImage size={48} border={0} />
-            <span style={{ fontSize: 20, fontWeight: 700, color: '#34D399', letterSpacing: '-0.01em' }}>Zoey&apos;s Eatery</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
+            <EateryLogoImage size={40} border={0} />
+            <span style={{ fontSize: 18, fontWeight: 700, color: '#34D399', letterSpacing: '-0.01em' }}>Zoey&apos;s Eatery</span>
           </div>
-          <p style={{ fontSize: 15, color: '#A7F3D0', lineHeight: 1.7, maxWidth: 500 }}>
+          <p style={{ margin: 0, fontSize: 14, color: '#A7F3D0', lineHeight: 1.6, maxWidth: 450 }}>
             Paltao&apos;s premier destination for billiards, relaxation, and great comfort food. We provide top-notch tables and freshly cooked meals.
           </p>
 
         </div>
 
         {/* Bottom Bar */}
-        <div style={{ borderTop: '1px solid rgba(52,211,153,0.2)', paddingTop: 24, textAlign: 'center' }}>
+        <div style={{ borderTop: '1px solid rgba(52,211,153,0.2)', paddingTop: 16, textAlign: 'center' }}>
           <p style={{ margin: 0, fontSize: 13, color: 'rgba(167,243,208,0.7)' }}>
             © {new Date().getFullYear()} Zoey&apos;s Billiard House & Eatery. All rights reserved.
           </p>
