@@ -376,31 +376,47 @@ export default function EateryApp({ onSwitchBrand }) {
               </div>
             </div>
 
-            {/* Hero Images - Split Pill Design */}
-            <div className="reveal reveal-delay-2" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 16, height: 380, paddingRight: 24 }}>
-              
-              {/* Left Pill (Shifted Up) */}
-              <div style={{ marginTop: -40 }}>
-                <div className="float-1" style={{ width: 140, height: 280, borderRadius: 100, overflow: 'hidden', boxShadow: '0 16px 40px rgba(5, 150, 105, 0.25)', border: `4px solid ${C.bgWhite}`, position: 'relative' }}>
-                  <img 
-                    src="/carousel eatery & street foods/Ihaw-Ihaw.jpg" 
-                    alt="Ihaw-Ihaw" 
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-                  />
-                </div>
-              </div>
+            {/* Animated Food SVG */}
+            <div className="reveal reveal-delay-2 hero-ball-wrapper" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingRight: 24 }}>
+              <svg className="hero-ball" width="220" height="220" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                
+                {/* Steaming Bowl Illustration */}
+                
+                {/* Steam 1 */}
+                <path d="M80,80 Q70,60 80,40 T80,10" fill="none" stroke="rgba(5, 150, 105, 0.4)" strokeWidth="6" strokeLinecap="round" className="float-1" />
+                {/* Steam 2 */}
+                <path d="M110,90 Q120,70 110,40 T110,15" fill="none" stroke="rgba(5, 150, 105, 0.5)" strokeWidth="8" strokeLinecap="round" className="float-2" />
+                {/* Steam 3 */}
+                <path d="M140,80 Q130,55 140,35 T140,10" fill="none" stroke="rgba(5, 150, 105, 0.3)" strokeWidth="5" strokeLinecap="round" className="float-3" />
 
-              {/* Right Pill (Shifted Down) */}
-              <div style={{ marginTop: 60 }}>
-                <div className="float-2" style={{ width: 150, height: 320, borderRadius: 100, overflow: 'hidden', boxShadow: '0 16px 40px rgba(5, 150, 105, 0.25)', border: `4px solid ${C.bgWhite}`, position: 'relative' }}>
-                  <img 
-                    src="/carousel eatery & street foods/Lechon Kawali.jpg" 
-                    alt="Lechon Kawali" 
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-                  />
-                </div>
-              </div>
+                {/* BBQ Skewer 1 */}
+                <line x1="160" y1="50" x2="100" y2="120" stroke="#8B4513" strokeWidth="6" strokeLinecap="round" />
+                <circle cx="145" cy="65" r="12" fill="#D2691E" />
+                <circle cx="130" cy="85" r="12" fill="#D2691E" />
+                <circle cx="115" cy="105" r="12" fill="#D2691E" />
 
+                {/* BBQ Skewer 2 */}
+                <line x1="60" y1="50" x2="120" y2="120" stroke="#8B4513" strokeWidth="6" strokeLinecap="round" />
+                <circle cx="75" cy="65" r="12" fill="#CD853F" />
+                <circle cx="90" cy="85" r="12" fill="#CD853F" />
+                <circle cx="105" cy="105" r="12" fill="#CD853F" />
+
+                {/* Bowl Back Edge */}
+                <ellipse cx="110" cy="120" rx="70" ry="20" fill="#047857" />
+
+                {/* Food Content (Broth/Sauce) */}
+                <ellipse cx="110" cy="122" rx="64" ry="16" fill="#F59E0B" />
+
+                {/* Bowl Front Body */}
+                <path d="M40,120 C40,180 70,190 110,190 C150,190 180,180 180,120 Z" fill="#064E3B" />
+                
+                {/* Bowl Pattern / Highlight */}
+                <path d="M50,130 C60,170 85,180 110,180 C135,180 160,170 170,130" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="6" strokeLinecap="round" />
+                
+                {/* Bowl Rim */}
+                <ellipse cx="110" cy="120" rx="70" ry="20" fill="none" stroke="#10B981" strokeWidth="6" />
+                
+              </svg>
             </div>
           </div>
         </section>
