@@ -234,6 +234,7 @@ export function BilliardApp({ onSwitchBrand }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [showScrollTop, setShowScrollTop] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
+  const [activeSection, setActiveSection] = useState('home')
 
   useEffect(() => {
     // Reveal Observer
@@ -252,6 +253,22 @@ export function BilliardApp({ onSwitchBrand }) {
       observer.observe(el)
     })
 
+    // Active Section Observer
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      { rootMargin: '-30% 0px -70% 0px' }
+    )
+
+    document.querySelectorAll('section[id]').forEach((section) => {
+      sectionObserver.observe(section)
+    })
+
     // Scroll to Top + Progress Listener
     const handleScroll = () => {
       const scrollTop = window.scrollY
@@ -263,6 +280,7 @@ export function BilliardApp({ onSwitchBrand }) {
 
     return () => {
       observer.disconnect()
+      sectionObserver.disconnect()
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
@@ -298,7 +316,7 @@ export function BilliardApp({ onSwitchBrand }) {
           <ul style={{ display: 'flex', alignItems: 'center', gap: 28, listStyle: 'none', margin: 0, padding: 0 }} className="desktop-nav">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className="nav-link">
+                <a href={link.href} className={`nav-link ${activeSection === link.href.substring(1) ? 'active' : ''}`}>
                   {link.label}
                 </a>
               </li>
@@ -326,6 +344,7 @@ export function BilliardApp({ onSwitchBrand }) {
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <a href={link.href} onClick={() => setMenuOpen(false)}
+                    className={`nav-link ${activeSection === link.href.substring(1) ? 'active' : ''}`}
                     style={{ display: 'block', padding: '10px 0', fontSize: 15, color: C.primary, textDecoration: 'none', borderBottom: `1px solid ${C.primaryPale}`, fontWeight: 500 }}>
                     {link.label}
                   </a>

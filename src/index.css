@@ -421,10 +421,12 @@ html { scrollbar-width: none; }
   background-color: #059669;
   transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
   color: #059669;
 }
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
   width: 100%;
 }
 
